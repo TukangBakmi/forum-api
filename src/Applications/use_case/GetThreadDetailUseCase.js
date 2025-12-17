@@ -30,6 +30,7 @@ class GetThreadDetailUseCase {
         date: comment.date,
         content: comment.content,
         isDelete: comment.is_delete,
+        likeCount: parseInt(comment.like_count, 10),
         replies: mappedReplies,
       });
     }));
