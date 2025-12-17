@@ -36,8 +36,6 @@ class CommentsHandler {
       status: 'success',
     };
   }
-
-
 }
 
 module.exports = CommentsHandler;
