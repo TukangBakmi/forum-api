@@ -5,6 +5,7 @@ on:
     branches:
       - master
 
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -14,9 +15,9 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }}
-        username: ubuntu
+        username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
-        port: 22
+        port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/forum-api
           git pull origin master
